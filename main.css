@@ -13,33 +13,111 @@ body {
     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 .d2 {
-    color: #095342;
+    color: #00455b;
 }
 .left {
     width: 600px;
-    border: 3px dashed #1f6628;
+    border: 3px dashed #00455b;
     float:left;
     padding:5px;
 }
 .right {
     width: 400px;
-    border: 3px dashed #1f6628;
+    border: 3px dashed #00455b;
     float:right;
     padding:5px;
 }
 .d3 {
-    border: 1px solid #1f6628;
+    border: 1px solid #00455b;
     background-color: #faffe5;
     padding:5px;
 }
 .d4 {
-    border: 1px solid #1f6628;
+    border: 1px solid #00455b;
     border-top:0px ;
     padding:5px;
 }
 .addButton {
-    background-color: #2185D0;
+    background-color: #00455b;
     color: #FFF;
     text-shadow: none;
     background-image: none;
+    padding: 1em 2em 1.15em;
+    border: none;
+}
+.input {
+    flex: 1 0 auto;
+    width: 300px;
+    position: relative;
+    font-weight: 400;
+    display: inline-flex;
+    color: #FFF;
+}
+.i1 {
+    padding: 1em 11.5em 1.15em;
+    padding-left: 12em;
+    background-color: #003446;
+    border: none;
+    color: #FFF;
+}
+. inpElem {
+    display: flex;
+    margin: 0;
+}
+.elem {
+    display: inline-flex;
+    width: 191px;
+}
+.te2 {
+    padding-left: 59px;
+    width: 100px;
+}
+.circButton {
+    color: #FFF;
+    text-shadow: none;
+    background-image: none;
+    border-radius: 10em;
+    padding: 1em 1em 1.15em;
+    border: none;
+}
+.te {
+    padding-top: 5px;
+}
+.min {
+    background-color: #ba030f;
+}
+.pl {
+    background-color: #1f6628;
+}
+.plMinButt {
+    padding-bottom: 5px;
+}
+.minicon {
+    font-family: Icons;
+    font-weight: 400;
+    font-style: normal;
+}
+.plusicon {
+    font-family: Icons;
+    font-weight: 400;
+    font-style: normal;
+}
+.numb {
+    padding-top: 8px;
+}
+.boughtButt {
+    background-color: #e3e3d1;
+    padding: 0.8em 2em 1em;
+    border: 1px solid #00455b;
+    border-radius: .4em;
+}
+.deleteButton{
+    background-color: #ba030f;
+    color: #FFF;
+    text-shadow: none;
+    background-image: none;
+    padding: 1em 1em 1.15em;
+    border: none;
+    vertical-align: middle;
+    border-radius: .4em;
 }
