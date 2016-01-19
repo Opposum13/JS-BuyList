@@ -3,6 +3,7 @@ h1 {
 }
 body {
     background-color: #fffec1;
+    background-image: url("M-LzdVjaPUM.jpg");
 }
 .mainDiv {
     padding-top: 170px;
@@ -20,17 +21,20 @@ body {
     border: 3px dashed #00455b;
     float:left;
     padding:5px;
+    border-radius: .4em;
 }
 .right {
     width: 400px;
     border: 3px dashed #00455b;
     float:right;
     padding:5px;
+    border-radius: .4em;
 }
 .d3 {
     border: 1px solid #00455b;
-    background-color: #faffe5;
+    background-color: #fff5e7;
     padding:5px;
+    border-radius: .4em;
 }
 .d4 {
     border: 1px solid #00455b;
@@ -44,6 +48,7 @@ body {
     background-image: none;
     padding: 1em 2em 1.15em;
     border: none;
+    border-radius: .4em;
 }
 .input {
     flex: 1 0 auto;
@@ -59,6 +64,7 @@ body {
     background-color: #003446;
     border: none;
     color: #FFF;
+    border-radius: .4em;
 }
 . inpElem {
     display: flex;
@@ -121,3 +127,37 @@ body {
     vertical-align: middle;
     border-radius: .4em;
 }
+.notBoughtElements {
+    font-size: 70%;
+    display: inline-block;
+    margin: 0 .14285714em;
+    background-color: #e3e3d1;
+    border: 1px solid #00455b;
+    padding: .5833em .833em;
+    color: #00455b;
+    border-radius: .28571429rem;
+}
+.t3 {
+    padding: 5px;
+}
+.miniLabel {
+    color: #00455b;
+    font-size: 130%;
+    border: 1px solid #00455b;
+    padding:5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 500rem;
+    margin: 5px;
+    background-color: #ffcd89;
+}
+.title {
+    font-size: 100%;
+}
+
+
+
+
+
+
+
