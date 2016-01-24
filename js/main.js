@@ -23,7 +23,11 @@ $(function(){
         $(this).css('font-size','25px');
     });
 
-    $('span.title').click(function(){        
+    $('button.deleteButton').click(function(){
+        $(this).parent().parent().remove();
+    });
+
+    $('span.title').click(function(){
         $(this).hide();
         $("div.newName").show();
     });
