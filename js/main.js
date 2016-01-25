@@ -13,8 +13,6 @@ $(function(){
     };
 
 
-    $("div.newName").hide();
-
 
 
 
@@ -29,7 +27,8 @@ $(function(){
 
     $('span.title').click(function(){
         $(this).hide();
-        $("div.newName").show();
+        var name=$(this).text();
+        $(this).parent().append("<div class='newName'><input type='text' placeholder='"+name+"'></div>");
     });
 
 
