@@ -82,7 +82,14 @@ $(function(){
         $(this).hide();
         var name=$(this).text();
         $(this).parent().append("<div class='newN'><input type='text' class='newName' value='"+name+"'></div>");
+        $('body').dblclick(function(){
+            var newN=$('input.newName').val();
+            $('div.newN').parent().append('<span class="title a">'+newN+'</span>');
+            $('div.newN').remove();
+
+        });
     });
+
 
 
 
