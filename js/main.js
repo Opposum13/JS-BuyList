@@ -8,7 +8,7 @@ $(function(){
 
 
 
-    //First version without node
+    //Old version without node
 
 
 
@@ -46,54 +46,54 @@ $(function(){
 //
 //
 //    });
-
-    $('button.deleteButton').click(function(){
-        var name=$(this).parent().find(".elem").find(".title").text();
-        $(this).parent().parent().remove();
-    });
-
-
-
-    $('button.pl').click(function(){
-        var t=$(this).parent().find(".numb").text();
-        var num=1;
-        for(var n=1;n<20;n++){
-            if(n==t){
-                num=n+1;
-                break;
-            }
-        }
-
-        $(this).parent().find(".numb").text(num);
-    });
-
-    $('button.min').click(function(){
-        var t=$(this).parent().find(".numb").text();
-        var num=1;
-        for(var n=20;n>1;n--){
-            if(n==t){
-                num=n-1;
-                break;
-            }
-        }
-
-        $(this).parent().find(".numb").text(num);
-    });
-
-
-
-
-    $('span.title.a').click(function(){
-        $(this).hide();
-        var name=$(this).text();
-        $(this).parent().append("<div class='newN'><input type='text' class='newName' value='"+name+"'></div>");
-        $('body').dblclick(function(){
-            var newN=$('input.newName').val();
-            $('div.newN').parent().append('<span class="title a">'+newN+'</span>');
-            $('div.newN').remove();
-
-        });
-    });
+//
+//    $('button.deleteButton').click(function(){
+//        var name=$(this).parent().find(".elem").find(".title").text();
+//        $(this).parent().parent().remove();
+//    });
+//
+//
+//
+//    $('button.pl').click(function(){
+//        var t=$(this).parent().find(".numb").text();
+//        var num=1;
+//        for(var n=1;n<20;n++){
+//            if(n==t){
+//                num=n+1;
+//                break;
+//            }
+//        }
+//
+//        $(this).parent().find(".numb").text(num);
+//    });
+//
+//    $('button.min').click(function(){
+//        var t=$(this).parent().find(".numb").text();
+//        var num=1;
+//        for(var n=20;n>1;n--){
+//            if(n==t){
+//                num=n-1;
+//                break;
+//            }
+//        }
+//
+//        $(this).parent().find(".numb").text(num);
+//    });
+//
+//
+//
+//
+//    $('span.title.a').click(function(){
+//        $(this).hide();
+//        var name=$(this).text();
+//        $(this).parent().append("<div class='newN'><input type='text' class='newName' value='"+name+"'></div>");
+//        $('body').dblclick(function(){
+//            var newN=$('input.newName').val();
+//            $('div.newN').parent().append('<span class="title a">'+newN+'</span>');
+//            $('div.newN').remove();
+//
+//        });
+//    });
 
 
 
@@ -132,28 +132,64 @@ $(function(){
 
 
 
-
-
-//        node.find('.deleteButton').click(function () {
-////            $("div.left").hide();
-////            var name=$(this).parent().find(".elem").find(".title").text();
-////            $(this).parent().parent().remove();
-//        });
-
-
         $("div.left").append(node);
         $("div.notB").append(node2);
+
+        $('button.deleteButton').click(function(){
+            var name=$(this).parent().find(".elem").find(".title").text();
+            $(this).parent().parent().remove();
+        });
+
+
+
+        $('button.pl').click(function(){
+            var t=$(this).parent().find(".numb").text();
+            var num=1;
+            for(var n=1;n<20;n++){
+                if(n==t){
+                    num=n+1;
+                    break;
+                }
+            }
+
+            $(this).parent().find(".numb").text(num);
+        });
+
+        $('button.min').click(function(){
+            var t=$(this).parent().find(".numb").text();
+            var num=1;
+            for(var n=20;n>1;n--){
+                if(n==t){
+                    num=n-1;
+                    break;
+                }
+            }
+
+            $(this).parent().find(".numb").text(num);
+        });
+
+
+
+
+        $('span.title.a').click(function(){
+            $(this).hide();
+            var name=$(this).text();
+            $(this).parent().append("<div class='newN'><input type='text' class='newName' value='"+name+"'></div>");
+            $('body').dblclick(function(){
+                var newN=$('input.newName').val();
+                $('div.newN').parent().append('<span class="title a">'+newN+'</span>');
+                $('div.newN').remove();
+
+            });
+        });
+
     }
-
-
-
 
 
 
     $('button.addButton').click(function(){
         var newElem = $("#inp").val();
         if(newElem!==""){
-
             createNewElement(newElem);
             $("#inp").val("");
         }
@@ -161,13 +197,9 @@ $(function(){
 
     });
 
-
-
-
-
-
-
-
+    createNewElement("Помідори");
+    createNewElement("Печиво");
+    createNewElement("Сир");
 
 
 });
