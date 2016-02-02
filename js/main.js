@@ -25,6 +25,8 @@ $(function(){
         '</div>'+
         '</div>';
 
+
+    var rightColumnList=$('.notB');
     function createNewElement(newElem){
 
         var node = $(one_item);
@@ -36,14 +38,18 @@ $(function(){
             '<span class="miniLabel"><b>1</b></span>'+
             '</div>';
 
+        var node3 ='<div class="notBoughtElements margT">'+
+            '<span class="title title1"><b>'+newElem+'</b></span>'+
+            '<span class="miniLabel"><b>1</b></span>'+
+            '</div>';
 
         list.append(node);
-        $("div.notB").append(node2);
+        rightColumnList.append(node2);
 
-        node.find('.deleteButton').click(function(){
-            var name=$(this).parent().find(".elem").find(".title").text();
-            $(this).parent().parent().remove();
-        });
+//        node.find('.deleteButton').click(function(){
+//            var name=$(this).parent().find(".elem").find(".title").text();
+//            $(this).parent().parent().remove();
+//        });
 
 
 
@@ -53,6 +59,8 @@ $(function(){
             console.log('Value',value);
 
             $(node).find(".numb").text(value);
+
+            (node2).find('.miniLabel').text(value);
         });
 
         node.find('.min').click(function(){
@@ -65,14 +73,18 @@ $(function(){
             }
 
             (node).find(".numb").text(value);
+            (node2).find('.miniLabel').text(value);
         });
 
 
         node.find('.deleteButton').click(function(){
             //delete from list
+            node2.remove(); //WHY IT DOES NOT WORK (>_<) I DO NOT UNDERSTAND (T_T)
             node.remove();
+
             //TODO: delete from right panel
             //I advise redraw all the right panel
+
 
         });
 
