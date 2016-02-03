@@ -32,6 +32,16 @@ $(function(){
         '<span class="miniLabel"><b>1</b></span>'+
         '</div>';
 
+
+    var rightBought=$('.bought');
+    var bought_item='<div class="notBoughtElements margT">'+
+        '<span class="title title2 lt"><b>'+'title3'+'</b></span>'+
+        '<span class="miniLabel lt"><b>1</b></span>'+
+        '</div>';
+
+
+
+
     function createNewElement(newElem){
 
         var node = $(one_item);
@@ -41,13 +51,13 @@ $(function(){
         var node2 =$(one_right_item);
         node2.find('.title1').text(newElem);
 
-        var node3 ='<div class="notBoughtElements margT">'+
-            '<span class="title title1"><b>'+newElem+'</b></span>'+
-            '<span class="miniLabel"><b>1</b></span>'+
-            '</div>';
+        var node3=$(bought_item);
+        node3.find('.title2').text(newElem);
 
         list.append(node);
         rightColumnList.append(node2);
+        rightBought.append(node3);
+        node3.hide();
 
 //        node.find('.deleteButton').click(function(){
 //            var name=$(this).parent().find(".elem").find(".title").text();
@@ -55,6 +65,15 @@ $(function(){
 //        });
 
 
+        node.find('.boughtButt').click(function(){
+
+            (node).find('.circButton').hide();
+            (node).find('.boughtButt').hide();
+            (node).find('.deleteButton').hide();
+            node2.hide();
+            node3.show();
+
+        });
 
         node.find('.pl').click(function(){
             var value = (node).find('.numb').text();
@@ -62,8 +81,8 @@ $(function(){
             console.log('Value',value);
 
             $(node).find(".numb").text(value);
-
             (node2).find('.miniLabel').text(value);
+            (node3).find('.miniLabel').text(value);
         });
 
         node.find('.min').click(function(){
@@ -77,6 +96,7 @@ $(function(){
 
             (node).find(".numb").text(value);
             (node2).find('.miniLabel').text(value);
+            (node3).find('.miniLabel').text(value);
         });
 
 
@@ -90,16 +110,21 @@ $(function(){
 
         });
 
-
-        //TODO: fix it
+/// Does not work(
         node.find('title').click(function(){
-            $(this).hide();
-            var name=$(this).text();
-            $(this).parent().append("<div class='newN'><input type='text' class='newName' value='"+name+"'></div>");
+            node.find('title').hide();
+            var name=(node).find('title').text();
+            node.find('elem.t').append("<div class='newN'><input type='text' class='newName' value='"+name+"'></div>");
             $('body').dblclick(function(){
-                var newN=$('input.newName').val();
-                $('div.newN').parent().append('<span class="title a">'+newN+'</span>');
-                $('div.newN').remove();
+                var newN=node.find('newName').val();
+                node.find('elem.t').remove();
+                node.find('.title').text(newN);
+                node.find('.title').show();
+                node2.find('title1').text(newN);
+
+
+//                $('div.newN').parent().append('<span class="title a">'+newN+'</span>');
+//                $('div.newN').remove();
 
             });
         });

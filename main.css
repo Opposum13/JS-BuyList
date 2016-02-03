@@ -192,4 +192,8 @@ body {
 .margT {
     margin-top: 2px;
 }
+.lt{
+    text-decoration: line-through;
+}
+
 
