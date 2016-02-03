@@ -27,16 +27,19 @@ $(function(){
 
 
     var rightColumnList=$('.notB');
+    var one_right_item='<div class="notBoughtElements margT">'+
+        '<span class="title title1"><b>'+'title2'+'</b></span>'+
+        '<span class="miniLabel"><b>1</b></span>'+
+        '</div>';
+
     function createNewElement(newElem){
 
         var node = $(one_item);
         node.find('.title').text(newElem);
 
 
-        var node2 ='<div class="notBoughtElements margT">'+
-            '<span class="title title1"><b>'+newElem+'</b></span>'+
-            '<span class="miniLabel"><b>1</b></span>'+
-            '</div>';
+        var node2 =$(one_right_item);
+        node2.find('.title1').text(newElem);
 
         var node3 ='<div class="notBoughtElements margT">'+
             '<span class="title title1"><b>'+newElem+'</b></span>'+
@@ -79,11 +82,10 @@ $(function(){
 
         node.find('.deleteButton').click(function(){
             //delete from list
-            node2.remove(); //WHY IT DOES NOT WORK (>_<) I DO NOT UNDERSTAND (T_T)
+            node2.remove();
+            //delete from right panel
             node.remove();
 
-            //TODO: delete from right panel
-            //I advise redraw all the right panel
 
 
         });
