@@ -130,6 +130,7 @@ $(function(){
             node.find('.title').hide();
             node.find('.elem.t').append(renameInput);
             node.find('.newName').val(name);
+            node.find('.newName').focus();
             node.find('.newName').focusout(function(){
                 var newN=node.find('.newName').val();
                 node.find('.newName').remove();
