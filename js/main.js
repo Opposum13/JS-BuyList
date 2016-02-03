@@ -124,23 +124,18 @@ $(function(){
 
         });
 
-/// Does not work(
+
         node.find('.title').click(function(){
-            var name=(node).find('title').text();
+            var name=(node).find('.title').text();
             node.find('.title').hide();
             node.find('.elem.t').append(renameInput);
             node.find('.newName').val(name);
-            $('body').dblclick(function(){
-                var newN=node.find('newName').val();
+            node.find('.newName').focusout(function(){
+                var newN=node.find('.newName').val();
                 node.find('.newName').remove();
                 node.find('.title').text(newN);
                 node.find('.title').show();
                 node2.find('.title1').text(newN);
-
-
-//                $('div.newN').parent().append('<span class="title a">'+newN+'</span>');
-//                $('div.newN').remove();
-
             });
         });
 
@@ -153,6 +148,7 @@ $(function(){
         if(newElem!==""){
             createNewElement(newElem);
             $("#inp").val("");
+            $("#inp").focus();
         }
 
 
