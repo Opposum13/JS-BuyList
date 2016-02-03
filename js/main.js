@@ -99,7 +99,6 @@ $(function(){
         });
 
 
-        
         node.find('.min').click(function(){
             var value = (node).find(".numb").text();
             value = parseInt(value);
