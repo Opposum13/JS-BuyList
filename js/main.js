@@ -40,6 +40,9 @@ $(function(){
         '</div>';
 
 
+    var notBButton='<button class="boughtButt margR5 notBButt">Не куплено</button>';
+
+    var renameInput="<div class='newN'><input type='text' class='newName' value='"+"newName"+"'></div>";
 
 
     function createNewElement(newElem){
@@ -72,7 +75,17 @@ $(function(){
             (node).find('.deleteButton').hide();
             node2.hide();
             node3.show();
+            (node).find('.te2').append(notBButton);
 
+            node.find('.notBButt').click(function(){
+                node3.hide();
+                node2.show();
+                (node).find('.circButton').show();
+                (node).find('.boughtButt').show();
+                (node).find('.deleteButton').show();
+                node.find('.notBButt').hide();
+
+            });
         });
 
         node.find('.pl').click(function(){
@@ -113,16 +126,17 @@ $(function(){
         });
 
 /// Does not work(
-        node.find('title').click(function(){
-            node.find('title').hide();
+        node.find('.title').click(function(){
             var name=(node).find('title').text();
-            node.find('elem.t').append("<div class='newN'><input type='text' class='newName' value='"+name+"'></div>");
+            node.find('.title').hide();
+            node.find('.elem.t').append(renameInput);
+            node.find('.newName').val(name);
             $('body').dblclick(function(){
                 var newN=node.find('newName').val();
-                node.find('elem.t').remove();
+                node.find('.newName').remove();
                 node.find('.title').text(newN);
                 node.find('.title').show();
-                node2.find('title1').text(newN);
+                node2.find('.title1').text(newN);
 
 
 //                $('div.newN').parent().append('<span class="title a">'+newN+'</span>');
